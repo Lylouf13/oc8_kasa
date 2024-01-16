@@ -1,0 +1,19 @@
+.card{
+    box-sizing: border-box;
+    width: inherit;
+    max-width: 340px;
+    min-height: 340px;
+    max-height: 340px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgb(223 126 126) 38%, rgb(255, 96, 96) 100%);
+
+    &__title{
+        position: relative;
+        width: 100px;
+        left: 10px;
+        top: 270px;
+        color: white;
+        text-align: left;
+        font-size: 18px;
+    }
+}

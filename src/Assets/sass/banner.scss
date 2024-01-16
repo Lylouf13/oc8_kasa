@@ -1,0 +1,21 @@
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    margin: 0 10% 0 10%;
+
+    &__img{
+        border-radius: 20px;
+        object-fit: cover;
+        height: 223px;
+        width: 100%;
+        filter: brightness(0.7);
+    }
+    &__title{
+        font-size: 40px;
+        color: white;
+        position: absolute;
+    }
+}
