@@ -1,10 +1,19 @@
+@import '../../Assets/sass/common/variables.scss';
+
 .navbar{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 80px;
 
     &__link{
         font-size: 24px;
-        color: #FF6060;
+        color: $main-color;
+    }
+    @media screen and (max-width:1050px){
+        gap: 25px;
+        &__link{
+            font-size: 12px;
+        }
     }
 }

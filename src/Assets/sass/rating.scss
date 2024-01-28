@@ -1,0 +1,14 @@
+@import './common/variables.scss';
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    .rating__star{
+        font-size: 22px;
+        color: rgb(204, 204, 204);
+        &-red{
+            color: $main-color;
+        }
+    }            
+}

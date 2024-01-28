@@ -1,8 +1,11 @@
 import React from 'react'
 import './home.scss'
-import Banner from '../Banner';
-import Card from '../Card';
+
+import Banner from '../../Components/Banner';
+import Card from '../../Components/Card';
 import homeBanner from '../../Assets/Images/homeBanner.jpg'
+
+import locations from '../../Assets/locations.json'
 
 
 
@@ -15,12 +18,10 @@ export default function Home() {
 
       <div className='locations'>
         <div className='locations__cards'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {locations.map((location, index)=>
+            <Card id={index} key={location.id+location} title={location.title} thumbnail={location.pictures[0]}/>
+            )
+          }
         </div>
       </div>
     </main>

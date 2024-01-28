@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../Assets/sass/card.scss'
 
-export default function Card() {
+export default function Card(location) {
   return (
-    <a className='card'href='#'>
-      <p className='card__title'>Titre de la location</p>
-    </a>
+    <Link className='card'to={`/Locations/${location.id}`}>
+      <p className='card__title'>{location.title}</p>
+      <img className='card__image' src={location.thumbnail}/>
+    </Link>
   )
 }

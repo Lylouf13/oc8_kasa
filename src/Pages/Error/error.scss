@@ -1,0 +1,23 @@
+@import '../../Assets/sass/common/variables.scss';
+
+.error{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 139px;
+    color: $main-color;
+
+    h1{
+        font-weight: 700;
+        font-size: 288px;
+    }
+    p{
+        font-size: 28px;
+    }
+    a{
+        font-size: 18px;
+        color: $main-color;
+        text-decoration: underline;
+    }
+}

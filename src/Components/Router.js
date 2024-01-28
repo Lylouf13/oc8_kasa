@@ -2,18 +2,18 @@ import React from 'react'
 import {Routes, Route} from "react-router-dom"
 
 
-import Home from './Home/Home.js';
-import FicheLogement from './Fiche-Logement/FicheLogement';
-import Error from './Error/Error.js';
-import APropos from './APropos/APropos.js';
+import Home from '../Pages/Home/Home.js';
+import Locations from '../Pages/Locations/Locations.js';
+import Error from '../Pages/Error/Error.js';
+import About from '../Pages/About/About.js';
 
 export default function Router() {
   return (
-    <Routes>
+    <Routes errorElement={<Error />}>
         <Route path="/" element={<Home />} />
-        <Route path="/Fiche-Logement" element={<FicheLogement />} />
-        <Route path="/404" element={<Error />} />
-        <Route path="/A-Propos" element={<APropos />} />
+        <Route path={"/Locations/:locationId"} element={<Locations />} />
+        <Route path="*" element={<Error />} />
+        <Route path="/About" element={<About />} />
     </Routes>
   )
 }

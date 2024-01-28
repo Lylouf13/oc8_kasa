@@ -4,4 +4,12 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px 10% 20px 10%;
+    img{
+        height: 64px;
+    }
+    @media screen and (max-width:1050px){
+        img{
+            height: 47px;
+        }
+    }
 }
