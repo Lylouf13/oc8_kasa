@@ -19,7 +19,7 @@ export default function Home() {
       <div className='locations'>
         <div className='locations__cards'>
           {locations.map((location, index)=>
-            <Card id={index} key={location.id+location} title={location.title} thumbnail={location.pictures[0]}/>
+            <Card id={index} key={`locationLink-${index}`} title={location.title} thumbnail={location.pictures[0]}/>
             )
           }
         </div>

@@ -21,8 +21,8 @@ export default function Collapse(content) {
         </p>
         <div className={'collapse__container' + ' ' + (open ? '' : 'collapse__container-closed' )}>
           {Array.isArray(content.elements) ? 
-            content.elements.map((element) => 
-              <p className='collapse__container__elements' key={element}>{element}</p>
+            content.elements.map((element, index) => 
+              <p className='collapse__container__elements' key={`${element}-${index}`}>{element}</p>
               )
               :
               <p className='collapse__container__elements' key={content.elements}>{content.elements}</p>

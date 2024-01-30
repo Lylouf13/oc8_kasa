@@ -17,37 +17,38 @@ export default function FicheLogement() {
   return (
 
     <main>
-      {location === undefined ?
+      {location === undefined ? (
       <Navigate to="/*" replace={true}/>
-      :
-      <section className="location">
-        <Caroussel images={location.pictures}/>
-        <div className="location__overview">
-          <div className='location__overview__main'>
-            <h2 className='location__overview__main__title'>{location.title}</h2>
-            <p className='location__overview__main__subtitle'>{location.location}</p>
-            <div className="location__overview__main__tags">
-              {location.tags.map((elements)=>
-                <Tags key={elements.id+elements}title={elements}/>
-                )
-              }
+      ) : (
+        <section className="location">
+          <Caroussel images={location.pictures}/>
+          <div className="location__overview">
+            <div className='location__overview__main'>
+              <h2 className='location__overview__main__title'>{location.title}</h2>
+              <p className='location__overview__main__subtitle'>{location.location}</p>
+              <div className="location__overview__main__tags">
+                {location.tags.map((elements)=>
+                  <Tags key={elements.id+elements}title={elements}/>
+                  )
+                }
+              </div>
+            </div>
+            <div className='location__overview__side'>
+                <div className='location__overview__side__host'>
+                  <p className='location__overview__side__host__name'>{location.host.name.replace(" ", "\n")}</p>
+                  <img className='location__overview__side__host__picture' src={location.host.picture}/>
+                </div>
+                <div className="location__overview__side__rates">
+                  <Rating rate={location.rating}/>
+                </div>
             </div>
           </div>
-          <div className='location__overview__side'>
-              <div className='location__overview__side__host'>
-                <p className='location__overview__side__host__name'>{location.host.name.replace(" ", "\n")}</p>
-                <img className='location__overview__side__host__picture' src={location.host.picture}/>
-              </div>
-              <div className="location__overview__side__rates">
-                <Rating rate={location.rating}/>
-              </div>
+          <div className="location__collapses">
+              <Collapse title="Description" elements={location.description} />
+              <Collapse title="Equipements" elements={location.equipments}/>
           </div>
-        </div>
-        <div className="location__collapses">
-            <Collapse title="Description" elements={location.description} />
-            <Collapse title="Equipements" elements={location.equipments}/>
-        </div>
-      </section>
+        </section>
+      )
       }
     </main>
   )
