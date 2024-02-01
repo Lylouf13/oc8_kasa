@@ -1,3 +1,5 @@
+@import './common/variables.scss';
+
 .banner{
     display: flex;
     position: relative;
@@ -19,9 +21,8 @@
         font-size: 40px;
         color: white;
     }
-    @media screen and (max-width:1050px){
-        margin: 0;
-        padding: 0 30px 0 30px;
+    @media screen and (max-width:$responsive-size-mobile){
+        margin: 0 20px 0 20px;
         &__img{
             height: 111px;
         }

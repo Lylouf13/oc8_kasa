@@ -37,7 +37,7 @@
         border-radius: 10px;
         transition: all 1s;
     }
-    @media screen and (max-width:1050px){
+    @media screen and (max-width:$responsive-size-mobile){
         margin-top: 20px;
         max-width: 100%;
         min-height: 255px;

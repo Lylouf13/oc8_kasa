@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 import '../Assets/sass/navbar.scss'
 
 export default function Navbar() {
+  const location = useLocation()
   return (
     <nav className='navbar'>
-        <Link className={'navbar__link'} to="/">Accueil</Link>
-        <Link className='navbar__link' to="/About">A Propos</Link>
+        <Link className={`navbar__link ${location.pathname==="/"? "navbar__link-underline" : ""}`} to="/">Accueil</Link>
+        <Link className={`navbar__link ${location.pathname==="/About"? "navbar__link-underline" : ""}`} to="/About">A Propos</Link>
     </nav>
   )
 }

@@ -14,6 +14,7 @@ export default function Home() {
     <main>
       <Banner 
         image={homeBanner}
+        alt="Panorama côtier, les vagues s'écrasent sur la côte"
         text="Chez vous, partout et ailleurs"/>
 
       <div className='locations'>

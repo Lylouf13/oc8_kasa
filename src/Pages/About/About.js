@@ -10,6 +10,7 @@ export default function About() {
     <main>
       <Banner 
         image={aboutBanner}
+        alt="Panorama montagneux ensoleillé"
         text=""/>
       <div className='about__collapses'>
         <Collapse title='Fiabilité'elements=

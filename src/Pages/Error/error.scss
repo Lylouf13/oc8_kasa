@@ -20,7 +20,7 @@
         color: $main-color;
         text-decoration: underline;
     }
-    @media screen and (max-width:1050px){
+    @media screen and (max-width:$responsive-size-mobile){
 
         gap: 100px;
         h1{
