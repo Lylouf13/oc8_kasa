@@ -17,9 +17,9 @@ export default function Collapse(content) {
   return (
     <div className='collapse'>
         <p className='collapse__title' onClick={(handleClick)}>{content.title}
-          <FontAwesomeIcon className={'collapse__icon' + ' ' + (open ? '' : 'collapse__icon-closed' )}icon={faChevronDown}/>
+          <FontAwesomeIcon className={`collapse__icon ${(open ? '' : 'collapse__icon-closed')}`}icon={faChevronDown}/>
         </p>
-        <div className={'collapse__container' + ' ' + (open ? '' : 'collapse__container-closed' )}>
+        <div className={`collapse__container ${(open ? '' : 'collapse__container-closed')}`}>
           {Array.isArray(content.elements) ? 
             content.elements.map((element, index) => 
               <p className='collapse__container__elements' key={`${element}-${index}`}>{element}</p>
