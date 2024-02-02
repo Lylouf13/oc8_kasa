@@ -1,8 +1,8 @@
 @import '../../Assets/sass/common/variables.scss';
 
 .about__collapses{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 100px;
+    margin-right: 100px;
 
     @media screen and (max-width:$responsive-size-mobile){
         margin:0 20px 0 20px;

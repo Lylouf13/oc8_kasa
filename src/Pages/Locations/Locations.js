@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import './locations.scss'
@@ -36,7 +36,7 @@ export default function FicheLogement() {
             <div className='location__overview__side'>
                 <div className='location__overview__side__host'>
                   <p className='location__overview__side__host__name'>{location.host.name.replace(" ", "\n")}</p>
-                  <img className='location__overview__side__host__picture' src={location.host.picture}/>
+                  <img className='location__overview__side__host__picture' src={location.host.picture} alt={`Profil du propriétaire, ${location.host.name}`}/>
                 </div>
                 <div className="location__overview__side__rates">
                   <Rating rate={location.rating}/>

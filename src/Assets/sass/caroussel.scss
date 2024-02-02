@@ -9,6 +9,8 @@
     object-fit: contain;
     margin-top: 0px;
     margin-bottom: 30px;
+    margin: 0 20px 30px 20px;
+
     width: 100%;
     height: 100%;
 
@@ -16,7 +18,9 @@
         border-radius: 20px;
         object-fit: cover;
         height: 415px;
-        width: 80%;
+        width: 100%;
+        margin: 0 20px 0px 20px;
+
         user-select: none;
     }
     &__icon{
@@ -33,10 +37,10 @@
             filter: drop-shadow(0 0 0.7rem black);
         }
         &-left{
-            left: 12%;
+            left: 3%;
         }
         &-right{
-            right: 12%;
+            right: 3%;
         }
     }
     &__count{

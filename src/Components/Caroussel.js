@@ -22,7 +22,7 @@ export default function Caroussel(content) {
 
     return (
     <section className='caroussel'>
-        <img className='caroussel__img' src={content.images[index]}/>
+        <img className='caroussel__img' src={content.images[index]} alt={`Photographie du domicile - ${index+1}`}/>
         {content.images.length > 1 && <FontAwesomeIcon onClick={()=> handleClick(-1)} className='caroussel__icon caroussel__icon-left' icon={faChevronLeft}/>}
         {content.images.length > 1 && <p className='caroussel__count'>{index+1}/{content.images.length}</p>}
         {content.images.length > 1 && <FontAwesomeIcon onClick={()=> handleClick(1)} className='caroussel__icon caroussel__icon-right' icon={faChevronRight}/>}
