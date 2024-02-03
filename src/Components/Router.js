@@ -9,7 +9,7 @@ import About from '../Pages/About/About.js';
 
 export default function Router() {
   return (
-    <Routes errorElement={<Error />}>
+    <Routes>
         <Route path="/" element={<Home />} />
         <Route path={"/Locations/:locationId"} element={<Locations />} />
         <Route path="*" element={<Error />} />
